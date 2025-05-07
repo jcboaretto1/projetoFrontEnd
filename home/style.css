@@ -1,0 +1,150 @@
+* {
+    margin: 0
+}
+
+#cabecalho {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    height: 70px;   
+}
+
+#cabecalho > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+}
+
+#search > input {
+    border: none;
+    padding: 5px 15px;
+    width: 100%;
+    height: 90%;
+    outline: none;
+    border-radius: 9999px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 400px;
+    position: relative;
+}
+
+#lupa {
+    height: 90%;
+    border-radius: 9999px;
+    right: 0;
+    position: absolute;
+}
+
+#lupa:hover {
+    cursor: pointer;
+}
+
+.link {
+    color: white;
+}
+
+.link:hover {
+    scale: 1.1;
+}
+/* #direita {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+} */
+
+#title {
+    color: rgb(225, 92, 92);
+    margin: 0;
+}
+
+#iconSerra{
+    height: 100%;
+}
+
+#cart {
+    height: 80%;
+    cursor: pointer;
+}
+
+span {
+    color: rgb(22, 176, 207);
+}
+
+header {
+    background-color: rgb(22, 176, 207);
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.nav-link:hover {
+    scale: 1.3;
+}
+
+
+/* estilização do main PRODUTOS! */
+
+#maisComprados {
+   text-align: center;
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoProduto > p {
+    margin: 0;
+}
+
+.infoProduto {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+
+.estrelas {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.estrela {
+    height: 100%;
+}
+
+
+
+
+@media ( max-width: 1024px ) {
+    #lupa, #search > input {
+        display: none;
+    }
+
+    #cabecalho > div {
+        gap: 10px;
+    }
+}
+
+
+@media ( max-width: 768px ) {
+
+}
