@@ -5,6 +5,10 @@ document.getElementById("formLogin").addEventListener("submit", async function (
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
 
+  if (!email || !senha) {
+    alert("Preencha os campos necessários!!!");
+    return;
+  }
 
   try { //COLOCAR A API AQUI
     const resposta = await fetch("https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users", {
