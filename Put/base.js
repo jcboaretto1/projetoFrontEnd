@@ -1,0 +1,1 @@
+var urlBase = `https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users`;
