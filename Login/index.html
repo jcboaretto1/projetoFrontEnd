@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="../GlobalStyles.css"> -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="formLogin">
+        <h1>Login</h1>
+        <div class="input-container">
+          <input id="emailUser" placeholder="Usuario" type="email" required />
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/fluency-systems-regular/48/user--v1.png"
+            alt="user--v1"
+          />
+        </div>
+
+        <div class="input-container">
+          <input id="senhaUser" placeholder="senha" type="password" required />
+
+          <img width="20" height="20" src="https://img.icons8.com/ios/50/lock--v1.png" alt="lock--v1" />
+          <!-- Verificar se o link está correto -->
+          <a href="../editar/index.html">Esqueci minha senha</a>
+        </div>
+
+        <button type="submit" class="submit-button">Entrar</button>
+
+        <div class="register-link">
+          <p>
+            Não está cadastrado?
+            <!-- Verifique se o link está correto -->
+            <a href="../Cadastro/index.html">Cadastrar</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <!-- Importe do script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
