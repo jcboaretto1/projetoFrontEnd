@@ -15,7 +15,7 @@ document.getElementById("formLogin").addEventListener("submit", async function (
     const usuarios = await resposta.json();
 
     // Faz a verificação se existe um usuário com o email e senha fornecidos
-    const usuarioEncontrado = usuarios.find(user => user.email === email && user.senha === senha);
+    const usuarioEncontrado = usuarios.find(user => user.email === email && user.password === senha);
 
     if (usuarioEncontrado) {
       alert("Login realizado com sucesso!");
