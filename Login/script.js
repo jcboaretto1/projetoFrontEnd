@@ -2,8 +2,8 @@
 document.getElementById("formLogin").addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+  const email = document.getElementById("emailUser").value;
+  const senha = document.getElementById("senhaUser").value;
 
   if (!email || !senha) {
     alert("Preencha os campos necessários!!!");
@@ -15,7 +15,7 @@ document.getElementById("formLogin").addEventListener("submit", async function (
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Bearer: token.token
+        //Bearer: token.token
       },
       body: JSON.stringify({ email, senha }),
     });
