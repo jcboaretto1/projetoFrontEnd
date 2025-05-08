@@ -1,4 +1,3 @@
-
 document.getElementById("formLogin").addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -10,23 +9,19 @@ document.getElementById("formLogin").addEventListener("submit", async function (
     return;
   }
 
-  try { //COLOCAR A API AQUI
-    const resposta = await fetch("https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        //Bearer: token.token
-      },
-      body: JSON.stringify({ email, senha }),
-    });
+  try {
+    // Faz a busca dos usuários na API
+    const resposta = await fetch("https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users");
+    const usuarios = await resposta.json();
 
-    const dados = await resposta.json();
+    // Faz a verificação se existe um usuário com o email e senha fornecidos
+    const usuarioEncontrado = usuarios.find(user => user.email === email && user.senha === senha);
 
-    if (resposta.ok) {
+    if (usuarioEncontrado) {
       alert("Login realizado com sucesso!");
       window.location.href = "../home/index.html";
     } else {
-      alert("Erro ao realizar login!!! ");
+      alert("Email ou senha incorretos.");
     }
   } catch (error) {
     alert("Erro ao conectar com o servidor !!!");
