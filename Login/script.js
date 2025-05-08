@@ -20,7 +20,7 @@ document.getElementById("formLogin").addEventListener("submit", async function (
 
     if (resposta.ok) {
       alert("Login realizado com sucesso!");
-      window.location.href = "../Home/index.html";
+      window.location.href = "../home/index.html";
     } else {
       alert("Erro ao realizar login!!! ");
     }
