@@ -83,6 +83,7 @@ header {
 
 a.nav-link {
     color: white;
+    font-size: 40px;
 }
 
 a.nav-link:hover {
@@ -93,6 +94,13 @@ a.nav-link:hover {
 /* estilização do main PRODUTOS! */
 
 #maisComprados {
+   text-align: center;
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+#maisVistos {
    text-align: center;
    margin: 20px;
    display: flex;
