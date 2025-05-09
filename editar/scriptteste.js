@@ -1,42 +1,45 @@
 async function editarUsuario(event) {
   event.preventDefault();
 
-  const userId = document.getElementById('userId').value.trim();
-  const novoEmail = document.getElementById('novoEmail').value.trim();
+  const email = document.getElementById('email').value.trim();
   const novaSenha = document.getElementById('novaSenha').value.trim();
 
-  if (!userId || !novoEmail || !novaSenha) {
+  if (!email || !novaSenha) {
     alert("Preencha todos os campos!");
     return;
   }
 
-  const url = `https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users/${userId}`;
+  const url = `https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users`;
 
   try {
-    // Verifica se o usuário existe primeiro
-    const verificar = await fetch(url);
-    if (!verificar.ok) {
-      alert("Usuário não encontrado. Verifique o ID.");
+    const resposta = await fetch(url);
+    const usuarios = await resposta.json();
+
+    const usuarioEncontrado = usuarios.find(user => user.email === email);
+
+    if (!usuarioEncontrado) {
+      alert("Usuário não encontrado!");
       return;
     }
 
+    const updateUrl = `${url}/${usuarioEncontrado.id}`; // URL para atualizar o usuário
+
     // Faz a requisição PUT com os campos corretos
-    const resposta = await fetch(url, {
+    const atualizar = await fetch(updateUrl, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: novoEmail,
         password: novaSenha // nome correto do campo
       })
     });
 
-    if (!resposta.ok) {
+    if (!atualizar.ok) {
       throw new Error(`Erro HTTP: ${resposta.status}`);
     }
 
-    const dados = await resposta.json();
+    const dados = await atualizar.json();
     console.log("Usuário atualizado com sucesso:", dados);
     alert("Usuário atualizado com sucesso!");
     window.location.href = "../Login/index.html";

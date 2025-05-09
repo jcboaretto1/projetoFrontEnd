@@ -34,15 +34,21 @@ h1 {
 
 button {
   width: 100%;
+  max-width: 200px; /* Largura maximo do botao */
+  margin: 0 auto; /* Centraliza o botão */
+  display: block;
   height: 40px;
   background-color: #2e7d32;
   color: #f8f9fa;
+  border: none;
   border-radius: 16px;
+  cursor: pointer;
+  font-size: 500;
 }
 
 button:hover {
   background-color: #27642b; /* Cor do botão ao passar o mouse */
-  transition: 0.6s;
+  transition: 0.3s;
 }
 
 .form-label {
