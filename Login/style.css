@@ -50,7 +50,7 @@ h1 {
   border: 2px solid rgba(255, 255, 255, 0.2); /* Borda com transparência */
   border-radius: 10px; /* Cantos arredondados */
   font-size: 16px;
-  color: #fff; /* cor do texto */
+  color: #ffffffea; /* cor do texto */
   padding: 20px 45px 20px 20px; /* Espaço interno( a direita tem mais para caber o ícone) */
 }
 
@@ -136,10 +136,10 @@ h1 {
   }
 
   .input-container input {
-    font-size: 14px; /*Texto menor nos Inputs */
+    font-size: 14px; /* Diminui o tamanho do texto dentro dos campos de digitação quando a tela é pequena */
   }
 
   .submit-button {
-    font-size: 14px; /*Texto menor no botão */
+    font-size: 14px; /* Deixa o texto do botão "Entrar" menor para caber melhor em telas menores */
   }
 }
