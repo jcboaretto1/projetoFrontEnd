@@ -11,6 +11,8 @@ body {
   display: flex; /* alinha o conteúdo do bady */
   align-items: center; /* Alinha verticalmente ao centro */
   justify-content: center; /*Alinha horizontalmente ao centro */
+  box-sizing: border-box; /*Faz com que a largura e a altura tenham padding e borda  */
+  font-family: "Roboto Slab", serif; /* Define a fonte  */
 }
 
 h1 {
@@ -28,10 +30,15 @@ h1 {
   padding: 30px 25px; /* Define o espaçamento interno: 30px em cima/baixo, 25px nos lados */
 }
 
+span {
+  font-size: 20px; /* tamanho */
+  text-align: center; /* Centraliza o texto */
+  color: #000000; /* Cor dele */
+}
 .divContato {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(163, 39, 157, 0.5);
+  background-color: rgba(158, 96, 54, 0.5);
 }
