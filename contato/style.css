@@ -12,6 +12,22 @@ body {
   align-items: center; /* Alinha verticalmente ao centro */
   justify-content: center; /*Alinha horizontalmente ao centro */
 }
+
+h1 {
+  font-size: 36px; /* tamanho */
+  text-align: center; /* Centraliza o texto */
+  color: #fff; /* Cor dele */
+}
+
+.containerContato {
+  width: 500px; /*Largura do contêiner*/
+  background: transparent; /*Fundo transparente */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borda com transparência */
+  backdrop-filter: blur(20px); /* Blurzinho */
+  border-radius: 10px; /* Arredonda os cantos da borda */
+  padding: 30px 25px; /* Define o espaçamento interno: 30px em cima/baixo, 25px nos lados */
+}
+
 .divContato {
   display: flex;
   justify-content: center;
