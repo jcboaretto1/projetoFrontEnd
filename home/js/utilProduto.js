@@ -29,11 +29,11 @@ function montarHtmlProduto(produto) {
                             <div class="infoProduto">
                                 <p>${produto.nome}</p>
                                 <div class="estrelas">
-                                    <img class= "estrela" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwo984WuxZzFZG_DMJhBWgOmvqiyiqr7HBw&s" alt="">
-                                    <img class= "estrela" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwo984WuxZzFZG_DMJhBWgOmvqiyiqr7HBw&s" alt="">
-                                    <img class= "estrela" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwo984WuxZzFZG_DMJhBWgOmvqiyiqr7HBw&s" alt="">
-                                    <img class= "estrela" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwo984WuxZzFZG_DMJhBWgOmvqiyiqr7HBw&s" alt="">
-                                    <img class= "estrela" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwo984WuxZzFZG_DMJhBWgOmvqiyiqr7HBw&s" alt="">
+                                    <img class= "estrela" src="https://cdn-icons-png.flaticon.com/512/541/541415.png" alt="">
+                                    <img class= "estrela" src="https://cdn-icons-png.flaticon.com/512/541/541415.png" alt="">
+                                    <img class= "estrela" src="https://cdn-icons-png.flaticon.com/512/541/541415.png" alt="">
+                                    <img class= "estrela" src="https://cdn-icons-png.flaticon.com/512/541/541415.png" alt="">
+                                    <img class= "estrela" src="https://cdn-icons-png.flaticon.com/512/541/541415.png" alt="">
                                 </div>
                                 <p>R$ ${produto.preco}</p>
                             </div>
