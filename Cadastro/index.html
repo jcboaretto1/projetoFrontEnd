@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Nova Conta</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="main">
+      <p><a href="../home/index.html" target="_blank">✖️</a></p>
+      <div>
+        <img src="./assests/9E94211F-B847-4999-BBD1-5BDBD7ED107A.png" alt="incon de perfil" />
+        <h2>Cadastrar Nova Conta</h2>
+      </div>
+
+      <section>
+        <form onsubmit="cadastrar(event)">
+          <!--"onsubmit" quando o botão for clicado, acontece o que está na função "cadastar"-->
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Digite seu E-mail" />
+
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" placeholder="Digite uma senha" />
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </body>
+</html>

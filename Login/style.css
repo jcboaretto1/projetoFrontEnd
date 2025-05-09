@@ -1,0 +1,145 @@
+* {
+  /* Resetando margens e preenchimentos */
+  margin: 0; /* Remove as margens externas */
+  padding: 0; /*Remove os espaçamento */
+  box-sizing: border-box; /*Faz com que a largura e a altura tenham padding e borda  */
+  font-family: "Roboto Slab", serif; /* Define a fonte  */
+}
+/*  Definindo os fluflu do body */
+body {
+  background: url("./backgroundFarmacia.jpg");
+  background-size: cover; /* Faz a imagem cobrir a tela inteira */
+  background-position: center; /* Centraliza a imagem */
+  min-height: 100vh; /* Garante que o corpo tenha o mínimo da altura da tela inteira */
+  display: flex; /* alinha o conteúdo do bady */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /*Alinha horizontalmente ao centro */
+}
+
+/* Estilo do contêiner */
+.container {
+  width: 420px; /*Largura do contêiner*/
+  background: transparent; /*Fundo transparente */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borda com transparência */
+  backdrop-filter: blur(20px); /* Blurzinho */
+  border-radius: 10px; /* Arredonda os cantos da borda */
+  padding: 30px 25px; /* Define o espaçamento interno: 30px em cima/baixo, 25px nos lados */
+}
+
+/*  Estilo do título LOGIN*/
+h1 {
+  font-size: 36px; /* tamanho */
+  text-align: center; /* Centraliza o texto */
+  color: #fff; /* Cor dele */
+}
+/* Agrupa cada campo de entrada com o seu estilo próprio */
+.input-container {
+  position: relative; /* Permite posicionar os elementos filhos em relação a este elemento */
+  width: 100%; /*Largura total do contêiner */
+  height: 50px; /*Altura do contêiner */
+  margin: 30px 0; /*Espaçamento em cima/baixo de 30px e 0 nos lados */
+}
+
+/*Estilo do campo de entrada (EMAIL E SENHA)*/
+.input-container input {
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Fundo transparente */
+  border: none; /* Tira a borda padrão */
+  outline: none; /* Tira o contorno azul quando clica */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borda com transparência */
+  border-radius: 10px; /* Cantos arredondados */
+  font-size: 16px;
+  color: #ffffffea; /* cor do texto */
+  padding: 20px 45px 20px 20px; /* Espaço interno( a direita tem mais para caber o ícone) */
+}
+
+/* Estilo do campo de entrada quando for acionado (clicado) */
+.input-container input::placeholder {
+  color: #fff;
+}
+
+/* Estilo para os ícones dentro dos campos de Input */
+.input-container img {
+  position: absolute; /*Permite posicionar o ícone em relação ao contêiner */
+  right: 24px; /*Distância da borda direita */
+  top: 20%; /*Desce um pouco do topo */
+  margin-top: 5px; /* Pequeno ajuste vertical */
+}
+
+/* Estilo do link "Esqueci minha senha" */
+.input-container a {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #fff;
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/*Estilo do link quando o mouse passa por cima */
+.input-container a:hover {
+  text-decoration: underline; /*Adiciona o sublinhado */
+}
+/* Estilo do botão de "Entrar" */
+.submit-button {
+  width: 100%;
+  height: 50px;
+  background: rgb(14, 118, 189); /*Cor de fundo do botão */
+  border: none;
+  border-radius: 10px; /*Arredondado os cantos*/
+  color: #fff;
+  font-weight: 500;
+  margin-top: 24px;
+  cursor: pointer; /*Quando o usuário passa  o cursor em cima dele ,o cursor vira a mãozinha*/
+  outline: none;
+  font-size: 16px;
+}
+
+/* Para mudar a cor do botão quando o mouse passa por cima */
+.submit-button:hover {
+  background: rgb(37, 170, 226); /* Um tom mais claro */
+}
+
+/* Estilização do link "Não tem uma conta?" */
+.register-link p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+
+/*Centraliza o conteúdo do link de cadastro */
+.register-link {
+  text-align: center;
+  margin: 20px 0;
+}
+/*Estilização do link Cadastro */
+.register-link p a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700; /* Aumentei o texto para destacar*/
+  text-decoration: none;
+}
+
+/*Estilo do link de cadastro quando o mouse passa por cima */
+.register-link p a:hover {
+  text-decoration: underline; /* Adiciona o sublinhado */
+}
+
+/* RESPONSIVIDADE - Ajustando a tela no mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Para ocupar quase toda a largura da tela*/
+    padding: 30px 15px; /*Para reduzir o espaçamento lateral para desgrudar da borda */
+  }
+
+  h1 {
+    font-size: 28px; /* Ajusta o tamanho do título*/
+  }
+
+  .input-container input {
+    font-size: 14px; /* Diminui o tamanho do texto dentro dos campos de digitação quando a tela é pequena */
+  }
+
+  .submit-button {
+    font-size: 14px; /* Deixa o texto do botão "Entrar" menor para caber melhor em telas menores */
+  }
+}
