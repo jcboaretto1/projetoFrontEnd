@@ -1,0 +1,88 @@
+/*Tirando margens de tudo, mudando a font e a cor da font*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+}
+
+/*tamanho da img, usando rem para melhor adaptação em diferentes telas*/
+img {
+  width: 1.6rem;
+  height: 1.5rem;
+}
+
+/*colocando img no fundo inteiro e alinhando intens no centro*/
+body {
+  background: url("./assests/backgroundFarmacia.jpg"); 
+  background-size: cover; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*tamanho, tamanho maximo, cor e borda do main (quadrado no centro)*/
+.main {
+  width: 100%;
+  max-width: 390px; 
+  background-color: transparent;
+  border: 2px solid #ffffff33; 
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/*colando a tag p no canto direito*/
+p {
+  display: flex;
+  justify-content: end;
+}
+
+/*tirando o "risquinho" da tag a*/
+a {
+  text-decoration: none;
+}
+
+/*colocando os elementos do form um a baixo do outro*/
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*tamnha interno, borda e cor dos inputs, coloqui margem para ficar espaçado*/
+input {
+  padding: 0.6rem;
+  margin: 0.3rem 0rem;
+  border: 0.3px solid  #ffffff33;
+  border-radius: 10px;
+  background-color: transparent; 
+ }
+
+ /*cor e tamanho da letra dentro do input*/
+ input::placeholder {
+  color: #ffffffb9; 
+  font-size: 0.8rem;
+ }
+
+
+/*tamanho interno da div alinhando no centro e distanciando os intens*/
+div {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  
+}
+
+/*tamanho interno do botao, cor e bordar*/
+button {
+  padding: 0.5rem;
+  margin: 0.3rem 0rem;
+  border-radius: 10px;
+  background: #0e76bd;
+  cursor: pointer;
+  border: 0.3px solid  #ffffff33 ;
+  
+}
