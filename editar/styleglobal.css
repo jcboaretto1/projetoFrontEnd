@@ -1,7 +1,9 @@
-
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #9edda0);
+  font-family: "Inter", sans-serif;
+  background: url(https://i.imgflip.com/2ayq9c.jpg?a484824);
+  /* background: linear-gradient(to bottom, #ffffff, #9edda0); */
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +11,6 @@ body {
 }
 
 #container {
-
   width: 100%;
   max-width: 400px; /* Largura maximo do formulario */
   background-color: white;
@@ -27,7 +28,7 @@ h1 {
 }
 
 .form-control {
-  margin-bottom:1em;
+  margin-bottom: 1em;
   font-weight: 500;
 }
 
@@ -41,7 +42,7 @@ button {
 
 button:hover {
   background-color: #27642b; /* Cor do botão ao passar o mouse */
-  transition: 0.6s; 
+  transition: 0.6s;
 }
 
 .form-label {

@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://e00-xlk-ue-marca.uecdn.es/uploads/2025/03/20/17153580328676.jpeg");
+  background-size: cover; /* Faz a imagem cobrir a tela inteira */
+  background-position: center; /* Centraliza a imagem */
+  min-height: 100vh; /* Garante que o corpo tenha o mínimo da altura da tela inteira */
+  display: flex; /* alinha o conteúdo do bady */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /*Alinha horizontalmente ao centro */
+}
+.divContato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(163, 39, 157, 0.5);
+}
