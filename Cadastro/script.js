@@ -9,7 +9,7 @@ async function cadastrar(e) {
     name: nomeInput,
     email: emailInput,
     password: senhaInput,
-  }
+  };
 
   if (!emailInput || !senhaInput || !nomeInput) {
     alert("Todos os campos são obrigatórios!");
@@ -27,9 +27,7 @@ async function cadastrar(e) {
 
     alert("Usuario cadastrado com sucesso!");
     location.reload();
-
   } catch (error) {
     alert("Erro ao cadastrar usuário!");
   }
 }
-

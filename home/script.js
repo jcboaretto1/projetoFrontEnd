@@ -1,27 +1,23 @@
-import { Controller } from "./js/Controller.js";
-import { Produto } from "./js/Produto.js";
-import { fazFetch } from "./js/funcoesUtil.js";
+// import { Controller } from "./js/Controller.js";
 import { getProdutos } from "./js/utilProduto.js";
+import { carregarHtml } from "../GlobalThings/carregarHtml.js";
 
 (async () => {
-  const controller = new Controller();
+  // const controller = new Controller();
 
-  await getProdutos(controller);
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  await carregarHtml("../GlobalThings/header.html", header);
+  await carregarHtml("../GlobalThings/footer.html", footer);
 
-  //   const produto = {
-  //     produto: "Pastilha Garganta",
-  //     preco: 20.0,
-  //     imagem: "./Assets/pastilha-garganta.webp",
-  //   };
-  const respostaPost = controller.post("produtos", produto);
+  await pegarUsuario();
+  await getProdutos();
 })();
 
 async function pegarUsuario() {
-  var usuario = localStorage.getItem("loginUsuario");
-  var name = JSON.parse(usuario);
+  const usuario = localStorage.getItem("loginUsuario");
+  const name = JSON.parse(usuario);
   console.log("usuario", name.name);
-  var user = document.getElementById("user");
+  const user = document.getElementById("user");
   user.innerHTML = name.name;
 }
-
-pegarUsuario();
