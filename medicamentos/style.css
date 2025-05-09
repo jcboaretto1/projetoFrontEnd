@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#cabecalho {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  height: 70px;
+}
+
+#cabecalho > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 50px;
+}
+
+#search > input {
+  border: none;
+  padding: 5px 15px;
+  width: 100%;
+  height: 90%;
+  outline: none;
+  border-radius: 9999px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+  position: relative;
+}
+
+#lupa {
+  height: 90%;
+  border-radius: 9999px;
+  right: 0;
+  position: absolute;
+}
+
+#lupa:hover {
+  cursor: pointer;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  scale: 1.1;
+}
+
+#title {
+  color: rgb(226, 50, 50);
+  margin: 0;
+}
+
+#iconSerra {
+  height: 100%;
+}
+
+#cart {
+  height: 70%;
+  cursor: pointer;
+}
+
+#cart:hover {
+  scale: 1.3;
+}
+
+span {
+  color: rgb(22, 176, 207);
+}
+
+header {
+  background-color: rgb(22, 176, 207);
+}
+
+a.nav-link {
+  color: white;
+  font-size: 40px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 25px;
+  height: 80px;
+}
+a.nav-link:hover {
+  scale: 1.3;
+}
+main {
+  padding: 20px;
+}
+
+.grid-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.produto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.produto .info {
+  padding: 15px;
+}
+
+.produto .nome {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.produto .preco {
+  color: #28a745;
+  font-size: 1.1em;
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.produto {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.produto > img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
