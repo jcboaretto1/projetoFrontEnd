@@ -23,21 +23,23 @@ document.getElementById("formLogin").addEventListener("submit", async function (
     const usuarios = await resposta.json();
 
     // Verifica se há um usuário com email e senha correspondentes
-    const usuarioEncontrado = usuarios.find(user =>
-      user.email.toLowerCase() === emailInput.toLowerCase() &&
-      user.password === senhaInput
+    const usuarioEncontrado = usuarios.find(
+      (user) => user.email.toLowerCase() === emailInput.toLowerCase() && user.password === senhaInput
     );
 
     // Se não encontrou, exibe mensagem de erro
     if (!usuarioEncontrado) {
       alert("Email ou senha inválidos!");
-      return;//Interrompe aqui se estiver errado
+      return; //Interrompe aqui se estiver errado
     }
 
     // Se chegou aqui, o login foi bem-sucedido AMÉM
     alert("Login realizado com sucesso!");
-    window.location.href = "../home/index.html";//Redireciona para a página HOME
-  } catch (error) { // Se ocorrer um erro no programa
+    localStorage.setItem("loginUsuario", JSON.stringify(usuarioEncontrado));
+
+    window.location.href = "../home/index.html"; //Redireciona para a página HOME
+  } catch (error) {
+    // Se ocorrer um erro no programa
     alert("Ocorreu um erro ao fazer login. Tente novamente mais tarde.");
     console.error("Erro:", error);
   }

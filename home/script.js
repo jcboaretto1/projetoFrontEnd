@@ -15,3 +15,13 @@ import { getProdutos } from "./js/utilProduto.js";
   //   };
   const respostaPost = controller.post("produtos", produto);
 })();
+
+async function pegarUsuario() {
+  var usuario = localStorage.getItem("loginUsuario");
+  var name = JSON.parse(usuario);
+  console.log("usuario", name.name);
+  var user = document.getElementById("user");
+  user.innerHTML = name.name;
+}
+
+pegarUsuario();
