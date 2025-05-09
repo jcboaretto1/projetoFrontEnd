@@ -1,10 +1,4 @@
-* {
-  margin: 0;
-}
-
-body {
-  background: linear-gradient(#295abb, #25aae1, #295abb, #25aae1);
-}
+/* style header */
 
 #cabecalho {
   background-color: gray;
@@ -58,10 +52,10 @@ body {
   scale: 1.1;
 }
 /* #direita {
-    display: flex;
-    height: 100%;
-    gap: 10px;
-} */
+      display: flex;
+      height: 100%;
+      gap: 10px;
+  } */
 
 #title {
   color: rgb(226, 50, 50);
@@ -103,75 +97,9 @@ a.nav-link:hover {
   scale: 1.3;
 }
 
-/* estilização do main PRODUTOS! */
+/* style footer */
 
-#maisComprados {
-  text-align: center;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#maisVistos {
-  text-align: center;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.produtos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.produto {
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-
-.produto > img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
-}
-
-.infoProduto > p {
-  margin: 0;
-}
-
-.infoProduto {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  text-align: center;
-}
-
-.excluir {
-  position: absolute;
-  right: 3%;
-  width: 20px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.estrelas {
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 7px;
-}
-
-.estrela {
-  height: 100%;
-}
-
-.footer {
+footer {
   background-color: #808080;
   color: #ffffff;
   padding: 40px 20px;
@@ -224,31 +152,4 @@ a.nav-link:hover {
   padding-top: 20px;
   font-size: 13px;
   color: black;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-section {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 1024px) {
-  #lupa,
-  #search > input {
-    display: none;
-  }
-
-  #cabecalho > div {
-    gap: 10px;
-  }
-}
-
-@media (max-width: 768px) {
 }

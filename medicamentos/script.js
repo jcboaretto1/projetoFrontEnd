@@ -1,4 +1,11 @@
+import { carregarHtml } from "../GlobalThings/carregarHtml.js";
+
 document.addEventListener("DOMContentLoaded", async () => {
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  await carregarHtml("../GlobalThings/header.html", header);
+  await carregarHtml("../GlobalThings/footer.html", footer);
+
   const url = "https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/produtos";
   const container = document.getElementById("produtos");
 
