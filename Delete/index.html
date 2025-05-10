@@ -1,90 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deletar Usuario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="../GlobalThings/GlobalStyle.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <script type="module" src="./script.js" defer></script>
-  </head>
+        href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../home/style.css" />
+    <script src="/base.js"></script>
+    <script src="./script.js" defer></script>
+</head>
 
-  <body>
-    <header></header>
-    <!-- <main>
-      <div id="divpai">
+<body>
+    <header>
+        <div id="cabecalho">
+            <div>
+                <img id="iconSerra" src="../home/Assets/SerraTecIcon.png" alt="">
+                <h1 id="title">Farmácia<span>Serratec</span></h1>
+            </div>
+
+            <div id="search" href="https://www.pudim.com.br/">
+                <input type="search" name="" id="" placeholder="O que você está buscando?">             
+                <img id="lupa"  src="https://media.istockphoto.com/id/1151843591/pt/vetorial/loupe-sign-icon-in-transparent-style-magnifier-vector-illustration-on-isolated-background.jpg?s=612x612&w=0&k=20&c=aFS8gdcNtX4gS6Igermq75eztxVdDvHp0S-Rw3aRLD8="  alt=""  >
+            </div>
+        
+            <div>        
+                <a id="user" class="link" href="../Login/index.html">
+                    Faça seu login ou Cadastro
+
+                    
+                </a>
+                <img id="cart" src="./Assets/cart.png" alt="">
+            </div>   
+        </div>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../home/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../medicamentos/index.html">Medicamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contato/index.html">Contato</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajuda</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="divpai">
         <form id="divfilhas" onsubmit="deleteUser(event)">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">ID do Usuario : </span>
-            <input
-              id="deleteUserId"
-              type="text"
-              class="form-control"
-              placeholder="deleteUserId : 3, 14, 15, 92..."
-              aria-label="deleteUserId"
-            />
-          </div>
-
-          <div id="divbuttons">
-            <button type="submit" class="btn btn-primary btn-lg">Buscar Usuário</button>
-          </div> -->
-
-    <!-- Exibir a  usuário -->
-    <!-- <div id="userInfo" class="user-info-container" style="display: none">
-            <div id="userInfoContent" class="user-info-content"></div>
-          </div> -->
-
-    <!-- Confirmar ou cancelar a exclusão -->
-    <!-- <div id="confirmDelete" class="confirm-actions" style="display: none">
-            <button onclick="confirmDeleteUser()" class="btn btn-danger confirm-btn">Confirmar Exclusão</button>
-            <button onclick="cancelDelete()" class="btn btn-secondary cancel-btn">Cancelar</button>
-          </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">ID do Usuario : </span>
+                <input id="deleteUserId" type="text" class="form-control" placeholder="deleteUserId : 3, 14, 15, 92..."
+                    aria-label="deleteUserId" />
+            </div>
+    
+            <div id="divbuttons">
+                <button type="submit" class="btn btn-primary btn-lg">Buscar Usuário</button>
+            </div>
+    
+            <!-- Exibir a  usuário -->
+            <div id="userInfo" class="user-info-container" style="display: none;">
+                <div id="userInfoContent" class="user-info-content"></div>
+            </div>
+    
+            <!-- Confirmar ou cancelar a exclusão -->
+            <div id="confirmDelete" class="confirm-actions" style="display: none;">
+                <button onclick="confirmDeleteUser()" class="btn btn-danger confirm-btn">Confirmar Exclusão</button>
+                <button onclick="cancelDelete()" class="btn btn-secondary cancel-btn">Cancelar</button>
+            </div>
         </form>
-      </div>
-    </main> -->
+    </div>
+</body>
 
-    <!-- TENTANDO AJUSTAR -->
-    <main>
-      <div class="form-container">
-        <form id="divfilhas" onsubmit="deleteUser(event)">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">ID do Usuário:</span>
-            <input
-              id="deleteUserId"
-              type="text"
-              class="form-control"
-              placeholder="deleteUserId : 3, 14, 15, 92..."
-              aria-label="deleteUserId"
-            />
-          </div>
-
-          <div id="divbuttons">
-            <button type="submit" class="btn btn-primary btn-lg">Buscar Usuário</button>
-          </div>
-
-          <div id="userInfo" class="user-info-container" style="display: none">
-            <div id="userInfoContent" class="user-info-content"></div>
-          </div>
-
-          <div id="confirmDelete" class="confirm-actions" style="display: none">
-            <button onclick="confirmDeleteUser()" class="btn btn-danger confirm-btn">Confirmar Exclusão</button>
-            <button onclick="cancelDelete()" class="btn btn-secondary cancel-btn">Cancelar</button>
-          </div>
-        </form>
-      </div>
-    </main>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
-
-    <footer></footer>
-  </body>
 </html>

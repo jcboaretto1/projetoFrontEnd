@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(url);
     if (!response.ok) throw new Error("Erro ao acessar a API");
 
-    // transformando para json
+    // transformando ele para json
     const produtos = await response.json();
 
     if (!Array.isArray(produtos) || produtos.length === 0) {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    // exibindo produtos dentro das caixinhas
+    // criando e exibindo produtos dentro das caixinhas div
     container.innerHTML = produtos
       .map(
         (produto) => `

@@ -1,14 +1,5 @@
 const urlBase = "https://68195b3c1ac1155635049727.mockapi.io/api/projetofinal/users";
 
-import { carregarHtml } from "../GlobalThings/carregarHtml.js";
-(async () => {
-  const header = document.querySelector("header");
-  const footer = document.querySelector("footer");
-
-  await carregarHtml("../GlobalThings/header.html", header);
-  await carregarHtml("../GlobalThings/footer.html", footer);
-})();
-
 async function deleteUser(e) {
   e.preventDefault();
   var idUsuario = document.getElementById("deleteUserId").value.trim();
@@ -30,10 +21,10 @@ async function deleteUser(e) {
 
     // Mostra informações do usuário para confirmação
     document.getElementById("userInfoContent").innerHTML = `
-            <h3>Usuário encontrado:</h3>
-            <p>ID: ${userData.id}</p>
+            <h3>Usuário encontrado:</h3>,
+            <p>ID: ${userData.id}</p>,
             <p>Nome: ${userData.name || "Não informado"}</p>
-        `;
+            `;
 
     document.getElementById("userInfo").style.display = "block";
     document.getElementById("confirmDelete").style.display = "block";
